@@ -1,76 +1,339 @@
-import "./Task&Goal.scss"
-import coin from '../../assets/coins.svg'
-import {DownOutlined} from '@ant-design/icons';
-import { Collapse } from 'antd';
+import "./Task&Goal.scss";
+import coin from "../../assets/coins.svg";
+import Upload from "../../assets/Upload.svg";
+import bin from "../../assets/collagebin.png";
+import five from "../../assets/five.svg"
+import collagepic from "../../assets/collagepic.png"
+import { DownOutlined } from "@ant-design/icons";
+import { Collapse } from "antd";
+import moment from "moment";
 
 const { Panel } = Collapse;
-const TaskAndGoals: React.FC  = () => {
-   const onChange = (key: string | string[]) => {
-      console.log(key);
-    };
-    return <div className="task_container">
-     <p className="task_heading">Task & Goals</p>
-     <div className="task_nav">
+const TaskAndGoals: React.FC = () => {
+  const onChange = (key: string | string[]) => {
+    console.log(key);
+  };
+  let date = moment();
+
+let currentDate = date.format('DD/MM/YYYY');
+console.log(currentDate); 
+  return (
+    <div className="task_container">
+      <p className="task_heading">Task & Goals</p>
+      <div className="task_nav">
         <button>360* Feedback</button>
         <button>Personal Goals</button>
-     </div>
-     <div className="task_coin">
+      </div>
+      <div className="task_coin">
         <p> To earn gold coin complete the Feedback task.</p>
-        <button><img src={coin} /></button>
-     </div>
-     <div className="dropdown">
-     <Collapse defaultActiveKey={['1']} onChange={onChange}>
-      <Panel header="Peer Feedback" key="1">
-        <p>{"ok"}</p>
-      </Panel>
-      <Panel header="Learner Feedback" key="2">
-        <p>{'text'}</p>
-      </Panel>
-      <Panel header="Management Feedback" key="3">
-        <p>{'text'}</p>
-      </Panel>
-      <Panel header="Parent Feedback" key="3">
-        <p>{'text'}</p>
-      </Panel>
-      <Panel header="Others" key="3">
-        <p>{'text'}</p>
-      </Panel>
-    </Collapse>
-      <div className="fb">
-         
-         {/* <button onClick={() => document.getElementById('peer_fb_box')!.style.display='block'}  className="peer_fb"><DownOutlined /></button> */}
+        <button>
+          <img src={coin} />
+        </button>
       </div>
-      {/* <div className="peer_fb_box">
-            <h1>Faciliting a session</h1>
-            <p>Deadline Date</p>
-            <input type="text" placeholder="Enter Deadline foe this Task" />
-            <p>Teacher Feedback</p>
-            <input type="text" placeholder="Enter feedback" />
-            <p>Upload Evidence/Result</p>
-         </div> */}
-      <div className="fb">
-         Learner Feedback
-         <button>   <DownOutlined /></button>
-      </div>
-      
-      <div className="fb">
-        Management Feedback
-        <button>   <DownOutlined /></button>
-     
-      </div>
+      <div className="dropdown">
+        <Collapse onChange={onChange}>
+          <Panel header="Peer Feedback" key="1">
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Faciliting a session</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
 
-      <div className="fb">
-        Parent Feedback
-        <button><DownOutlined /></button>
-      </div>
+                    <p>Teachers Feedback</p>
+                    <input type="text" placeholder="Enter Feedback" />
+                  </div>
 
-      <div className="fb"> 
-        Others
-        <button><DownOutlined /></button>
-      </div>
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <p>Collaborating with colleague</p>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+                   <div className="ip_cont">
+                   
+                    <input type="text" placeholder="Enter Class & Section" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                  </div>
+                  </div>
 
-     </div>
-    </div>;
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </Panel>
+          <Panel header="Learner Feedback" key="2">
+          <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Action Researcher</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+
+                    <p>Enter Problem</p>
+                    <input type="text" placeholder="Enter Problem" />
+
+                    
+                    <p>Action Taken</p>
+                    <input type="text" placeholder="Enter Action Taken" />
+                  </div>
+
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </Panel>
+          <Panel header="Management Feedback" key="3">
+          <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Uploading evidence of implementation of planner</h3>
+
+                  <p>{currentDate}</p>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+
+                    <p>Time of Evidence</p>
+                    <input type="text"  />
+                  </div>
+
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Attending PD sessions</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+
+                    <p>Learning from  session</p>
+                    <input type="text" placeholder="Enter Feedback" />
+                  </div>
+
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </Panel>
+
+          <Panel header="Others" key="5">
+            <p>  <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Faciliting a session</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+
+                    <p>Teachers Feedback</p>
+                    <input type="text" placeholder="Enter Feedback" />
+                  </div>
+
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>SDJ Initiative</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+                   <div className="ip_cont">
+                   
+                    <input type="text" placeholder="Enter Class & Section" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                  </div>  
+                  <div className= "peer_sub_ip">
+                  <p>Teacher's Feedback</p>
+                  
+                    <input
+                      type="text"
+                      placeholder="Enter  Feedback"
+                    />
+                  
+                  </div>
+  </div>
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div></p>
+          </Panel>
+        </Collapse>
+      </div>
+    </div>
+  );
 };
 
 export default TaskAndGoals;

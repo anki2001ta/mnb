@@ -22,49 +22,49 @@ function Content(): JSX.Element {
 				<Route
 					path="/"
 					element={
-					  <ProtectedRoute>
+					//   <ProtectedRoute>
 							<Home />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 				<Route
 					path="/calendar"
 					element={
-						<ProtectedRoute>
+						// <ProtectedRoute>
 							<Calendar />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 				<Route
 					path="/task-and-goals"
 					element={
-						 <ProtectedRoute>
+						//  <ProtectedRoute>
 							<TaskAndGoals />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 				<Route
 					path="/awaaz"
 					element={
-						 <ProtectedRoute>
+						//  <ProtectedRoute>
 							<Awaaz />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 				<Route
 					path="/profile"
 					element={
-						 <ProtectedRoute>
+						//  <ProtectedRoute>
 							<Profile />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 				<Route
 					path="/resource-hub"
 					element={
-						 <ProtectedRoute>
+						//  <ProtectedRoute>
 							<ResourceHub />
-						 </ProtectedRoute>
+						//  </ProtectedRoute>
 					}
 				/>
 			</Routes>
