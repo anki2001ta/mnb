@@ -32,6 +32,12 @@ console.log(currentDate);
       </div>
       <div className="dropdown">
         <Collapse onChange={onChange}>
+
+          {/* PEER BVDFJKVFJHLJFDHVLDFFLDKDFLKKLFDLKDFLJKVLDFKJVKLJFDVFDJ. */}
+
+
+
+
           <Panel header="Peer Feedback" key="1">
             <div className="wrapper">
               {
@@ -114,6 +120,12 @@ console.log(currentDate);
               }
             </div>
           </Panel>
+
+
+          {/* NVKFNVJFNVLJKNGBGLJHBGKFJLBVKFNVFJKVNFJVBNFJVFJVNF */}
+
+
+
           <Panel header="Learner Feedback" key="2">
           <div className="wrapper">
               {
@@ -158,6 +170,14 @@ console.log(currentDate);
               }
             </div>
           </Panel>
+
+
+
+
+          {/* JDJDFJDKFDJSFHJKDFCNNC MNC */}
+
+         
+
           <Panel header="Management Feedback" key="3">
           <div className="wrapper">
               {
@@ -240,6 +260,95 @@ console.log(currentDate);
             </div>
           </Panel>
 
+          <Panel header="Parent Feedback" key="4">
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <h3>Teacher - Parent partnership</h3>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+                   <div className="parent_div">
+                    <input type="text" placeholder="Enter class & section" />
+                    <input type="text" placeholder="Enter name of teacher" />
+                    </div>
+                  </div>
+
+                  <div className="contex">
+                  <p>Description about Goal</p>
+                 
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+                     
+                     
+                     
+                    </div> 
+                    <button>Add New Goal</button>
+                    <img src={five} />
+                  </div>
+               
+              }
+            </div>
+            <div className="wrapper">
+              {
+                <div className="peer_container">
+                  <p>Collaborating with colleague</p>
+                  <div className="peer_sub">
+                    <p>Deadline Date</p>
+                    
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+                   <div className="ip_cont">
+                   
+                    <input type="text" placeholder="Enter Class & Section" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                    <input type="text" placeholder="Enter name of Subject Teacher" />
+                  </div>
+                  </div>
+
+                  <div className="contex">
+                    <p>Upload Evidence/Result</p>
+                    <div  className="mini_div">
+                      <div className="mini_div_Container">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                     
+                      <img src={five} />
+                     
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </Panel>
+
+
+
+
+
+
+
+
+
+
+
+
           <Panel header="Others" key="5">
             <p>  <div className="wrapper">
               {
@@ -305,7 +414,7 @@ console.log(currentDate);
                     />
                   
                   </div>
-  </div>
+                </div>
                   <div className="contex">
                     <p>Upload Evidence/Result</p>
                     <div  className="mini_div">

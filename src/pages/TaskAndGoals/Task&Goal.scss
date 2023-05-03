@@ -262,3 +262,36 @@ input{
    
 }
 }
+
+.parent_div{
+    display: flex;
+   margin-top: 50px;
+   gap: 40px;
+    input{
+        width:47%;
+        height: 48px;
+        background: #FDFEFF;
+        border: 1px solid #CBD5E1;
+        border-radius: 10px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        text-indent: 20px;
+    }
+}
+
+.contex{
+    input{
+        width:98%;
+        height: 48px;
+        background: #FDFEFF;
+        border: 1px solid #CBD5E1;
+        border-radius: 10px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        text-indent: 20px;
+    }
+}
