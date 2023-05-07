@@ -5,7 +5,7 @@
   flex-wrap: wrap;
     width:100%;
     justify-content:space-between;
-    align-items:center;
+   align-items:center;
     gap:20px;
     margin-top: 30px;
 ;
@@ -15,9 +15,9 @@
 .home>div:nth-child(1){
      width:65%;
      height:650px;
-     margin-left: 20px;
-     display: flex;
-     gap: 35%;
+   //  margin-left: 20px;
+    // display: flex;
+    // gap: 35%;
      
 
 }
@@ -107,4 +107,8 @@
 .colored_component>div:nth-child(2){
     padding: 20px;
     margin-top: 20px;
+}
+
+.COLOR{
+    color:black
 }

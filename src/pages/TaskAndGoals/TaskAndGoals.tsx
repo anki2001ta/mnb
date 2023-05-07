@@ -31,7 +31,7 @@ console.log(currentDate);
         </button>
       </div>
       <div className="dropdown">
-        <Collapse onChange={onChange}>
+        <Collapse onChange={onChange} expandIconPosition="end">
 
           {/* PEER BVDFJKVFJHLJFDHVLDFFLDKDFLKKLFDLKDFLJKVLDFKJVKLJFDVFDJ. */}
 
