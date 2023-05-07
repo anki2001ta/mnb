@@ -4,7 +4,7 @@ import awaaj from "../../assets/awaj.svg";
 import subject from "../../assets/book.svg";
 import chapter from "../../assets/chapter.svg";
 import pencil from '../../assets/pencil.svg'
-// import Test from '../../components/Calender'
+import Test from '../../components/Calender'
 
 
 const Calendar = () => {
@@ -13,7 +13,7 @@ const Calendar = () => {
       <div className="calender_section">
 
 
-{/* <Test /> */}
+<Test />
 
 
 	  </div>

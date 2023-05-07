@@ -22,9 +22,9 @@ function Content(): JSX.Element {
 				<Route
 					path="/"
 					element={
-					//   <ProtectedRoute>
+					  <ProtectedRoute>
 							<Home />
-						//  </ProtectedRoute>
+						 </ProtectedRoute>
 					}
 				/>
 				<Route
@@ -62,9 +62,9 @@ function Content(): JSX.Element {
 				<Route
 					path="/resource-hub"
 					element={
-						//  <ProtectedRoute>
+						 <ProtectedRoute>
 							<ResourceHub />
-						//  </ProtectedRoute>
+						 </ProtectedRoute>
 					}
 				/>
 			</Routes>
