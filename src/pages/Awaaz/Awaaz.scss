@@ -1,7 +1,16 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mediaQuery.scss";
+
 .awaaz_container{
  
 margin-top: 40px;
 width:1128px;
+@include mq500px
+{
+   width: 90%;
+}
+
+
 }
 
 .awaaz_heading{
@@ -10,8 +19,18 @@ width:1128px;
     line-height:32px;
     line-height: 32px ;
     font-weight: bold; 
-    padding:0px 30px
-   
+    padding:0px 30px;
+    @include mq500px
+    {
+      
+font-size: 18px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+
+
+    }
 }
 .awaaz_subheading{
 font-family: Inter;
@@ -19,7 +38,14 @@ font-style: Regular;
 font-size: 16px;
 line-height: 24px;
 color:#808080;
-padding:0px 30px
+padding:0px 30px;
+@include mq500px
+{
+   width: 380px;
+font-weight: 400;
+letter-spacing: 0em;
+text-align: justified;
+}
  
 }
 
@@ -29,6 +55,13 @@ padding:0px 30px
    margin-left: 22px;
    background-color: #F5FCFF;
 
+   @include mq500px{
+      margin-top: 50px;
+      height: 479px;
+width: 348px;
+border-radius: 8px;
+
+   }
  
      
 }
@@ -56,7 +89,8 @@ padding:0px 30px
  }
 .btn{
     text-align: center;
-    padding:80px
+    margin-top: 30px;
+   //  padding:80px
    
 }
  .awz_btn{
@@ -75,4 +109,13 @@ padding:0px 30px
  }
  .logo{
     width: 58px;
+    @include mq500px{
+      height: 80.96px;
+width: 58.22px;
+position: absolute;
+left: 299px;
+top: 174px;
+border-radius: 0px;
+
+    }
  }

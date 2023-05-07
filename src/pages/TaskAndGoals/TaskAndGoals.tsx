@@ -31,7 +31,7 @@ console.log(currentDate);
         </button>
       </div>
       <div className="dropdown">
-        <Collapse onChange={onChange}>
+        <Collapse onChange={onChange} expandIconPosition='end'>
 
           {/* PEER BVDFJKVFJHLJFDHVLDFFLDKDFLKKLFDLKDFLJKVLDFKJVKLJFDVFDJ. */}
 
@@ -178,7 +178,7 @@ console.log(currentDate);
 
          
 
-          <Panel header="Management Feedback" key="3">
+          <Panel header="Management Feedback" key="3" >
           <div className="wrapper">
               {
                 <div className="peer_container">
