@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.6",
+    "@fullcalendar/interaction": "^6.1.6",
+    "@fullcalendar/list": "^6.1.6",
+    "@fullcalendar/react": "^6.1.6",
+    "@fullcalendar/timegrid": "^6.1.6",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/react-redux": "^7.1.25",
     "@types/react-router-dom": "^5.3.3",

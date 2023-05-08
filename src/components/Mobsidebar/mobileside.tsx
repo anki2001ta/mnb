@@ -11,9 +11,9 @@ import {
 	MdOutlineGroups,
 	MdOutlineCollectionsBookmark,
 } from "react-icons/md";
-import "./sidebar.scss";
+import "./mobileside.scss";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+
 import design from "../../assets/sidebar_design.png";
 import { ReactNode } from "react";
 import { AppDispatch } from "../../redux/store";
@@ -30,15 +30,15 @@ const CustomLogo = () => {
 	);
 };
 
-const Sidebar = (props: SidebarProps): JSX.Element => {
+const Mobsidebar = (props: SidebarProps): JSX.Element => {
 	const { children } = props;
 	const navigate = useNavigate();
 	const dispatch = useAppDispatch();
 
 	return (
 		<div>
-			<div className="container ">
-				<div className="side_bar">
+			
+				<div className="side_bar2">
 					<img
 						src={design}
 						alt="design"
@@ -47,7 +47,7 @@ const Sidebar = (props: SidebarProps): JSX.Element => {
 					<CustomLogo />
 
 					<Menu
-						className="menu"
+						className="menu2"
 						defaultSelectedKeys={[window.location.pathname]}
 						onClick={({ key }) => {
 							navigate(key);
@@ -95,7 +95,7 @@ const Sidebar = (props: SidebarProps): JSX.Element => {
 						]}
 					/>
 					<Menu
-						className="menu"
+						className="menu2"
 						onClick={({ key }) => {
 							if (key == "/logout") {
 								dispatch(logout());
@@ -124,13 +124,13 @@ const Sidebar = (props: SidebarProps): JSX.Element => {
 						]}
 					/>
 				</div>
-				<div style={{ width: "100%" }}>
+				{/* <div style={{ width: "100%" }}>
 					<Navbar />
 					{children}
-				</div>
-			</div>
+				</div> */}
+			
 		</div>
 	);
 };
 
-export default Sidebar;
+export default Mobsidebar;

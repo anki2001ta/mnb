@@ -1,7 +1,11 @@
+
+
+
 .box{
     padding: 35px;
 }
 .calender_cards{
+color: #475569;
     h1{
 font-family: Inter;
 font-size: 24px;
@@ -9,6 +13,7 @@ font-weight: 600;
 line-height: 32px;
 letter-spacing: 0em;
 text-align: justified;
+margin-top: 80px;
 
     }
     .cards{
@@ -65,4 +70,8 @@ text-align: justified;
         background-color: #FFFCF2 ;
         text-align: center;
     }
+}
+
+.wrapp_comp{
+    margin-top: 80px;
 }

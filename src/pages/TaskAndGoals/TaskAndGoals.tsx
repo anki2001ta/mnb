@@ -31,11 +31,7 @@ console.log(currentDate);
         </button>
       </div>
       <div className="dropdown">
-<<<<<<< HEAD
         <Collapse onChange={onChange} expandIconPosition="end">
-=======
-        <Collapse onChange={onChange} expandIconPosition='end'>
->>>>>>> 01a486f1b95c390dc67a6cc943b8ab13ef998de0
 
           {/* PEER BVDFJKVFJHLJFDHVLDFFLDKDFLKKLFDLKDFLJKVLDFKJVKLJFDVFDJ. */}
 

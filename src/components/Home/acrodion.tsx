@@ -2,21 +2,16 @@ import "../Home/acrodion.scss";
 import "../../pages/TaskAndGoals/Task&Goal.scss";
 import Upload from "../../assets/Upload.svg";
 import bin from "../../assets/collagebin.png";
-import five from "../../assets/five.svg"
 import collagepic from "../../assets/collagepic.png"
 import { Collapse, Space } from 'antd';
 
 const { Panel } = Collapse;
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+
 
 const TaskAndGoals: React.FC = () => (
-    <div className="wrapp">
-    <p className="para">Upcoming Tasks</p>
+  <div className="wrapp">
+  <p className="para">Upcoming Tasks</p>
   <Space direction="vertical">
     <Collapse collapsible="header" defaultActiveKey={['1']} size="large" ghost="false"
    expandIconPosition="end"
@@ -58,6 +53,7 @@ const TaskAndGoals: React.FC = () => (
         
       </Panel>
     </Collapse>
+    {/* collapse 1 */}
     <Collapse collapsible="header" defaultActiveKey={['1']} size="large" ghost="false"
     className="collapse"
     expandIconPosition="end"

@@ -5,6 +5,13 @@ import subject from "../../assets/book.svg";
 import chapter from "../../assets/chapter.svg";
 import pencil from '../../assets/pencil.svg'
 import Test from '../../components/Calender'
+import "../../pages/TaskAndGoals/Task&Goal.scss";
+import Upload from "../../assets/Upload.svg";
+import bin from "../../assets/collagebin.png";
+import collagepic from "../../assets/collagepic.png"
+import { Collapse, Space } from 'antd';
+
+const { Panel } = Collapse;
 
 
 const Calendar = () => {
@@ -14,8 +21,6 @@ const Calendar = () => {
 
 
 <Test />
-
-
 	  </div>
       <div className="calender_cards">
         <h1>Today's Schedule</h1>
@@ -50,6 +55,51 @@ const Calendar = () => {
 		  </div>
         </div>
       </div>
+      <div   >
+      <div className="wrapp_comp">
+  <p className="para">Today’s Task</p>
+  <Space direction="vertical">
+    <Collapse collapsible="header" defaultActiveKey={['1']} size="large" ghost="false"
+   expandIconPosition="end"
+    className="collapse"
+    >
+      <Panel header="Uploading evidence of implementation of planner" key="1"
+      className="panel">
+        <div className="peer_sub2">
+                    <h4>Deadline Date</h4>
+                    <input
+                      type="text"
+                      placeholder="Enter Deadline for This Task"
+                    />
+
+                    <h4>Title of Evidence</h4>
+                    <input type="text" placeholder="Enter Feedback" />
+                  </div>
+
+                  <div className="contex2">
+                    <h4>Upload Evidence/Result</h4>
+                    <div  className="mini_div2">
+                      <div className="mini_div_Container2">
+                        <div>
+                          <img src={bin} alt="" />
+                        </div>
+                        <div>
+                          <img src={collagepic}/>
+                        </div>
+                        <div>
+                          <img src={Upload}/>
+                          <p>Drag and drop files or Browse</p>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
+        
+      </Panel>
+    </Collapse>
+    </Space>
+      </div>
+    </div>
     </div>
   );
 };

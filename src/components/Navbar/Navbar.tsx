@@ -1,5 +1,6 @@
 import { Button, Input, Drawer } from "antd";
 import "./Navbar.scss";
+import Mobsidebar from "../Mobsidebar/mobileside"
 import { SearchOutlined, BellOutlined, BarsOutlined } from "@ant-design/icons";
 import { BsChatLeftText } from "react-icons/bs";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
@@ -11,6 +12,12 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [open, setOpen] = useState(false);
   const [msg, setMsg] = useState(false);
+  const [showside,setShowside]=useState(false)
+
+   const handleClick=()=>{
+    setShowside(true)
+   }
+
 
   const showDrawer = () => {
     setOpen(true);
@@ -36,7 +43,8 @@ const Navbar = (props: Props) => {
         placeholder="Search"
         suffix={<SearchOutlined />}
       />
-      <Button className="menu_button" onClick={() => {}}>
+      <Button className="menu_button" onClick={handleClick}>
+        {showside && <Mobsidebar/>}
         <BarsOutlined className="menu_button" />
       </Button>
       <div>
